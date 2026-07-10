@@ -23,25 +23,23 @@ The circuit and data translation are fully modeled and tested via online simulat
 
 ![Wokwi Simulation](WhatsApp%20Image%202026-07-09%20at%201.49.12%20PM.jpeg)
 
-### Custom Hardware Enclosures (3D Models)
+### Custom Hardware Enclosures & CAD Models
 The project utilizes dedicated 3D-printed impact-resistant shells for both the remote control deck and the primary robotic body.
 
-**| Handheld Controller Case (Top Shell) |**
+| Handheld Controller Case (Top Shell) | Internal Electronics Vault (Chassis Base) |
 | :---: | :---: |
-| ![Controller Shell]<img width="840" height="671" alt="image" src="https://github.com/user-attachments/assets/4a2a4f72-1334-4140-a650-1a404504f570" />
+| ![Controller Shell](image_fbb8e9.png) | ![Chassis Base](image_fc0b85.png) |
 
-**| Soccer Game Board |**
+| Assembled Robot Unit | Micro Gearmotor & Drivetrain Assembly |
 | :---: | :---: |
-| ![Chassis Base]<img width="946" height="747" alt="image (1)" src="https://github.com/user-attachments/assets/c4cb2a4a-4c2c-4f3e-b6b3-e042eb47ee7d" /> |
-
-**| Assembled Robot Unit | Micro Gearmotor & Drivetrain Assembly |**
-| :---: | :---: |
-| ![Full Robot Chassis]<img width="690" height="716" alt="image (2)" src="https://github.com/user-attachments/assets/5832ea16-0bed-4cdb-ba13-3e562893cc72" /> | | ![Gearbox Integration]<img width="466" height="345" alt="image (3)" src="https://github.com/user-attachments/assets/ce43fbda-d028-4995-ac59-09e7b64f89bb" /> |
+| ![Full Robot Chassis](image_fc0ba3.png) | ![Gearbox Integration](image_fc0bc3.png) |
 
 ### Interactive PCB Layout
 You can explore and inspect our hardware configuration and trace routes directly through your web browser:
 
-[![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?github=https://github.com/NidheeshP28/Outpost2026/tree/main/pcb)
+[![View PCB on KiCanvas](https://hack.club/pcb-badge)](https://kicanvas.org/?github=https://github.com/<OWNER>/<REPOSITORY>/tree/main/pcb)
+
+*(Note: Remember to replace `<OWNER>` and `<REPOSITORY>` in the link above with your actual GitHub username and repository name!)*
 
 ---
 
@@ -74,7 +72,7 @@ Follow the pin configuration below to safely distribute power and signals from y
 
 ### Step 4: Final Mechanical Assembly
 1. Open the **Serial Monitor** at a baud rate of `9600` to verify your live outputs (`0 - 1023`).
-2. Once testing passes, slide the Arduino Nano and your wiring harness into the internal brackets inside the 3D-printed enclosure base.
+2. Once testing passes, slide the Arduino Nano and your wiring harness into the internal brackets inside the 3D-printed enclosure base (`image_fc0b85.png`).
 3. Align and bolt down the dual joysticks into the faceplate recess using small metric machine hardware, then snap and secure the outer case shells together.
 
 ---
@@ -82,16 +80,3 @@ Follow the pin configuration below to safely distribute power and signals from y
 ## 🔌 Pin Mapping (Wiring Configuration)
 
 The physical and virtual devices map across the following digital and analog boundaries:
-[LEFT JOYSTICK]                    [ARDUINO NANO]                   [RIGHT JOYSTICK]
-(Pin 1) GND   ------------------->    [ GND ]    <-------------------   GND (Pin 1)
-(Pin 2) +5V   ------------------->    [  5V ]    <-------------------   +5V (Pin 2)
-(Pin 3) VRX   ------------------->    [  A0 ]                           
-(Pin 4) VRY   ------------------->    [  A1 ]                           
-                                      [  A2 ]    <-------------------   VRX (Pin 3)
-                                      [  A3 ]    <-------------------   VRY (Pin 4)
----
-
-## 📁 Repository Structure
-* **`controller.ino`** - Core micro-controller firmware compiling signal gathering, calibration dead-bands, and data formatting.
-* **`diagram.json`** - Digital schematic map detailing Wokwi simulator wire routing configurations and coordinates.
-* **`/pcb`** - KiCad/EasyEDA electrical design files, schematics, and manufacturing Gerber files.
