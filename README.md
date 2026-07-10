@@ -36,7 +36,7 @@ The project utilizes dedicated 3D-printed impact-resistant shells for both the r
 
 **| Assembled Robot Unit | Micro Gearmotor & Drivetrain Assembly |**
 | :---: | :---: |
-| ![Full Robot Chassis]<img width="690" height="716" alt="image (2)" src="https://github.com/user-attachments/assets/5832ea16-0bed-4cdb-ba13-3e562893cc72" /> | ![Gearbox Integration]<img width="466" height="345" alt="image (3)" src="https://github.com/user-attachments/assets/ce43fbda-d028-4995-ac59-09e7b64f89bb" /> |
+| ![Full Robot Chassis]<img width="690" height="716" alt="image (2)" src="https://github.com/user-attachments/assets/5832ea16-0bed-4cdb-ba13-3e562893cc72" /> | | ![Gearbox Integration]<img width="466" height="345" alt="image (3)" src="https://github.com/user-attachments/assets/ce43fbda-d028-4995-ac59-09e7b64f89bb" /> |
 
 ### Interactive PCB Layout
 You can explore and inspect our hardware configuration and trace routes directly through your web browser:
